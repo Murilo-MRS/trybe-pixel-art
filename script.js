@@ -25,3 +25,13 @@ function colorirPixel() {
   }
 }
 colorirPixel();
+
+function limpar() {
+  const btnLimpar = document.getElementById('clear-board');
+  btnLimpar.addEventListener('click', function () {
+    for (let index = 0; index < pixelColor.length; index += 1) {
+      pixelColor[index].className = 'pixel white';
+    }
+  });
+}
+limpar();
