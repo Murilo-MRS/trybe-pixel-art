@@ -35,3 +35,4 @@ function limpar() {
   });
 }
 limpar();
+window.onload = colorirPixel;
