@@ -16,9 +16,12 @@ for (let index = 0; index < paletaCor.length; index += 1) {
 }
 
 const pixelColor = document.querySelectorAll('.pixel');
-for (let index = 0; index < pixelColor.length; index += 1) {
-  pixelColor[index].addEventListener('click', function (e) {
-    const elementoCor = document.querySelector('.selected').classList[1];
-    e.target.className = 'pixel' + ' ' + elementoCor;
-  });
+function colorirPixel() {
+  for (let index = 0; index < pixelColor.length; index += 1) {
+    pixelColor[index].addEventListener('click', function (e) {
+      const elementoCor = document.querySelector('.selected').classList[1];
+      e.target.className = 'pixel' + ' ' + elementoCor;
+    });
+  }
 }
+colorirPixel();
