@@ -39,7 +39,7 @@ Você pode ~~e deve~~ ir além para deixar o projeto com a sua cara e impression
   
   * Este projeto é individual;
   * São 2 dias de projeto;
-  * Data para entrega final do projeto: `12/07/2022 14:10`.
+  * Data para entrega no prazo regular: `12/07/2022 14:00`.
 
 </details>
 
