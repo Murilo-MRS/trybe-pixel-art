@@ -2,6 +2,11 @@ body {
   text-align: center;
 }
 
+#color-palette {
+  margin: 0;
+  padding: 0;
+}
+
 .color {
   border: 1px solid black;
   height: 40px;
@@ -24,15 +29,21 @@ body {
   display: inline-block;
   background-color: yellow;
 }
-
+.white {
+  display: inline-block;
+  background-color: white;
+}
 .pixel {
   display: inline-block;
   border: 1px solid black;
   width: 40px;
   height: 40px;
+  margin-bottom: -6px;
 }
 
 #pixel-board {
-  border: 1px solid black;
   width: 200px;
+  height: 220px;
+  margin: 20px auto;
+  width: 220px;
 }
