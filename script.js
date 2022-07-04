@@ -7,13 +7,16 @@ for (let index = 0; index < 25; index += 1) {
   pixelBoard.appendChild(pixel);
 }
 
-for (let index = 0; index < paletaCor.length; index += 1) {
-  paletaCor[index].addEventListener('click', function (evento) {
-    const elementoCor = document.querySelector('.selected');
-    elementoCor.classList.remove('selected');
-    evento.target.classList.add('selected');
-  });
+function selected() {
+  for (let index = 0; index < paletaCor.length; index += 1) {
+    paletaCor[index].addEventListener('click', function (evento) {
+      const elementoCor = document.querySelector('.selected');
+      elementoCor.classList.remove('selected');
+      evento.target.classList.add('selected');
+    });
+  }
 }
+selected();
 
 const pixelColor = document.querySelectorAll('.pixel');
 function colorirPixel() {
