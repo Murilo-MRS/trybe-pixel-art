@@ -9,7 +9,7 @@ for (let index = 0; index < 25; index += 1) {
 // ------- FUNÇÃO PARA ADICIONAR CLASSE SELECTED
 function selected() {
   for (let index = 0; index < paletaCor.length; index += 1) {
-    paletaCor[index].addEventListener('click', function (evento) {
+    paletaCor[index].addEventListener('click', (evento) => {
       const elementoCor = document.querySelector('.selected');
       elementoCor.classList.remove('selected');
       evento.target.classList.add('selected');
@@ -21,9 +21,9 @@ selected();
 const pixelColor = document.querySelectorAll('.pixel');
 function colorirPixel() {
   for (let index = 0; index < pixelColor.length; index += 1) {
-    pixelColor[index].addEventListener('click', function (e) {
+    pixelColor[index].addEventListener('click', (e) => {
       const elementoCor = document.querySelector('.selected').classList[1];
-      e.target.className = 'pixel' + ' ' + elementoCor;
+      e.target.className = `pixel ${elementoCor}`;
     });
   }
 }
@@ -31,7 +31,7 @@ colorirPixel();
 // ------- FUNÇÃO RESETAR QUADRO DE PIXELS
 function limpar() {
   const btnLimpar = document.getElementById('clear-board');
-  btnLimpar.addEventListener('click', function () {
+  btnLimpar.addEventListener('click', () => {
     for (let index = 0; index < pixelColor.length; index += 1) {
       pixelColor[index].className = 'pixel white';
     }
