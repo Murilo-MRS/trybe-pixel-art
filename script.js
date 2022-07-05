@@ -8,7 +8,7 @@ function boardSize(tamanho) {
   for (let index = 0; index < tamanho * tamanho; index += 1) {
     const pixel = document.createElement('div');
     pixel.classList = 'pixel white';
-    let largura = 42 * tamanho;
+    const largura = 42 * tamanho;
     pixelBoard.style.width = `${largura}px`;
     pixelBoard.appendChild(pixel);
   }
@@ -51,12 +51,14 @@ function apagarBoard() {
   while (pixelBoard.hasChildNodes()) {
     pixelBoard.removeChild(pixelBoard.firstChild);
   }
-};
+}
 // ------ FUNÇÃO CRIAR PIXEL DE ACORDO COM INPUT
-btnSize.addEventListener('click', function () {
+btnSize.addEventListener('click', () => {
   apagarBoard();
-  if (parseInt(input.value) === 0 || !input.value){
-    alert('Board inválido!')
+  const novoTamanho = input.value;
+  const numNovoTamanho = parseFloat(novoTamanho);
+  if (numNovoTamanho === 0 || !novoTamanho) {
+    alert('Board inválido!');
   }
-  boardSize(input.value);
+  boardSize(novoTamanho);
 });
