@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  box-sizing: border-box;
 }
 
 #color-palette {
@@ -17,18 +18,22 @@ body {
   background-color: black;
   display: inline-block;
 }
+
 .red {
   display: inline-block;
   background-color: red;
 }
+
 .blue {
   display: inline-block;
   background-color: blue;
 }
+
 .yellow {
   display: inline-block;
   background-color: yellow;
 }
+
 .white {
   display: inline-block;
   background-color: white;
@@ -43,7 +48,6 @@ body {
 }
 
 #pixel-board {
-  width: 200px;
   height: 220px;
   margin: 20px auto;
   width: 220px;
