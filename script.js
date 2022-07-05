@@ -1,11 +1,19 @@
 const paletaCor = document.querySelectorAll('.color');
 const pixelBoard = document.querySelector('#pixel-board');
-// ------ PIXEL BORAD 5X5
-for (let index = 0; index < 25; index += 1) {
-  const pixel = document.createElement('div');
-  pixel.classList = 'pixel white';
-  pixelBoard.appendChild(pixel);
+const input = document.getElementById('board-size');
+const btnSize = document.getElementById('generate-board');
+
+// ------ PIXEL BORDA 5X5
+function boardSize(tamanho) {
+  for (let index = 0; index < tamanho * tamanho; index += 1) {
+    const pixel = document.createElement('div');
+    pixel.classList = 'pixel white';
+    let largura = 42 * tamanho;
+    pixelBoard.style.width = `${largura}px`;
+    pixelBoard.appendChild(pixel);
+  }
 }
+boardSize(5);
 // ------- FUNÇÃO PARA ADICIONAR CLASSE SELECTED
 function selected() {
   for (let index = 0; index < paletaCor.length; index += 1) {
@@ -38,4 +46,17 @@ function limpar() {
   });
 }
 limpar();
-window.onload = colorirPixel;
+// ------ FUNÇÃO PARA LIMPAR DIV PIXEL ANTES DE CRIAR MAIS
+function apagarBoard() {
+  while (pixelBoard.hasChildNodes()) {
+    pixelBoard.removeChild(pixelBoard.firstChild);
+  }
+};
+// ------ FUNÇÃO CRIAR PIXEL DE ACORDO COM INPUT
+btnSize.addEventListener('click', function () {
+  apagarBoard();
+  if (parseInt(input.value) === 0 || !input.value){
+    alert('Board inválido!')
+  }
+  boardSize(input.value);
+});
