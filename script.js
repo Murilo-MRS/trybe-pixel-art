@@ -53,12 +53,19 @@ function apagarBoard() {
   }
 }
 // ------ FUNÇÃO CRIAR PIXEL DE ACORDO COM INPUT
+
 btnSize.addEventListener('click', () => {
   apagarBoard();
-  const novoTamanho = input.value;
-  const numNovoTamanho = parseFloat(novoTamanho);
-  if (numNovoTamanho === 0 || !novoTamanho) {
+  let novoTamanho = input.value;
+  if (parseFloat(novoTamanho) === 0 || !novoTamanho) {
     alert('Board inválido!');
+  }
+  if (input.value < 5) {
+    novoTamanho = 5;
+  }
+
+  if (input.value > 50) {
+    novoTamanho = 50;
   }
   boardSize(novoTamanho);
 });
