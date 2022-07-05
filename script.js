@@ -1,12 +1,12 @@
 const paletaCor = document.querySelectorAll('.color');
 const pixelBoard = document.querySelector('#pixel-board');
-
+// ------ PIXEL BORAD 5X5
 for (let index = 0; index < 25; index += 1) {
   const pixel = document.createElement('div');
   pixel.classList = 'pixel white';
   pixelBoard.appendChild(pixel);
 }
-
+// ------- FUNÇÃO PARA ADICIONAR CLASSE SELECTED
 function selected() {
   for (let index = 0; index < paletaCor.length; index += 1) {
     paletaCor[index].addEventListener('click', function (evento) {
@@ -17,7 +17,7 @@ function selected() {
   }
 }
 selected();
-
+// ------- FUNÇÃO PARA TROCAR A COR DO PIXEL
 const pixelColor = document.querySelectorAll('.pixel');
 function colorirPixel() {
   for (let index = 0; index < pixelColor.length; index += 1) {
@@ -28,7 +28,7 @@ function colorirPixel() {
   }
 }
 colorirPixel();
-
+// ------- FUNÇÃO RESETAR QUADRO DE PIXELS
 function limpar() {
   const btnLimpar = document.getElementById('clear-board');
   btnLimpar.addEventListener('click', function () {
