@@ -32,18 +32,16 @@ function selected() {
 selected();
 
 // ------- FUNÇÃO PARA TROCAR A COR DO PIXEL
-const pixelColor = document.querySelectorAll('.pixel');
+const pixelColor = document.getElementsByClassName('pixel');
 function colorirPixel() {
-  for (let index = 0; index < pixelColor.length; index += 1) {
-    pixelColor[index].addEventListener('click', (e) => {
-      const elementoCor = document.querySelector('.selected').style.backgroundColor;
-      e.target.style.backgroundColor = elementoCor;
-    });
-  }
+  pixelBoard.addEventListener('click', (e) => {
+    const elementoCor = document.querySelector('.selected').style.backgroundColor;
+    e.target.style.backgroundColor = elementoCor;
+  });
 }
 colorirPixel();
 
-// ------- FUNÇÃO RESETAR QUADRO DE PIXELS
+// ------- FUNÇÃO RESETAR COR QUADRO DE PIXELS
 function limpar() {
   const btnLimpar = document.getElementById('clear-board');
   btnLimpar.addEventListener('click', () => {
@@ -97,7 +95,15 @@ function atualizaCorAleatoria() {
 }
 atualizaCorAleatoria();
 // ----- FUNÇÃO CRIA DIVS DE CORES ALEATORIAS
-
-for (let index = 1; index < document.getElementsByClassName('color').length; index += 1) {
-  document.getElementsByClassName('color')[index].style.backgroundColor = `${corAleatoria[index]}`;
+function atribuirCorAleatoriaNaDiv() {
+  for (
+    let index = 1;
+    index < document.getElementsByClassName('color').length;
+    index += 1
+  ) {
+    document.getElementsByClassName('color')[
+      index
+    ].style.backgroundColor = `${corAleatoria[index]}`;
+  }
 }
+atribuirCorAleatoriaNaDiv();
