@@ -7,6 +7,8 @@ Projeto realizado durante módulo de fundamentos do curso de desenvolvimento web
 
   - Neste projeto, implementei um editor de arte com pixels em que a pessoa usuária poderá escolher uma cor em uma paleta de cores e poderá pintar o que quiser em um quadro branco :art: :artist:
 
+  ![exemplo de arte com pixels](./art-with-pixels.gif)
+
 </details>
 <details>
   <summary>Habilidades</summary>
